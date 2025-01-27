@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bridal Consulting</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Bridal<br>Consulting</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Início</a></li>
+                <li><a href="#services">Serviços</a></li>
+                <li><a href="#gallery">Galeria</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+            <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h2>Bem-vindo à Bridal Consulting</h2>
+        <p>Transformamos momentos em experiências inesquecíveis! Nossa missão é criar eventos únicos e memoráveis,
+            conectando empresas aos seus públicos de maneira elegante, profissional e inovadora.
+            Seja para casamentos, formaturas, aniversários ou eventos corporativos, cada detalhe é pensado para encantar e surpreender!</p>
+    </section>
+
+    <section id="services">
+        <h2>Serviços</h2>
+        <p class="services-intro">Na Bridal Consulting, concetramos os melhores fornecedores para todos os tipos de eventos:</p>
+        <ul class="services-list">
+            <li><strong>Casamentos:</strong> Celebrações apaixonantes e cheias de emoção.</li>
+            <li><strong>Formaturas:</strong> Festas inesquecíveis para comemorar conquistas.</li>
+            <li><strong>Aniversários:</strong> Momentos únicos para celebrar a vida.</li>
+            <li><strong>Eventos Corporativos:</strong> Soluções criativas para fortalecer marcas e parcerias.</li>
+            <li><strong>Festas Temáticas:</strong> Experiências personalizadas com toda a originalidade que você merece.</li>
+        </ul>
+        <p class="services-highlight">🌟 Faça aparecer sua marca um sucesso com a Bridal Consulting. Estamos aqui para criar momentos que ficarão para sempre na memória e nas dos seus clientes!</p>
+    </section>
+
+    <section id="gallery">
+        <h2>Galeria de Eventos</h2>
+        <p>Veja fotos de alguns eventos anteriores organizados pela Bridal Consulting.</p>
+        <div id="gallery-images" class="mosaic">
+            <figure>
+                <img src="fotos/foto2.jpeg" alt="Evento 1" class="large">
+                <figcaption>Casamento</figcaption>
+            </figure>
+            <figure>
+                <img src="fotos/foto4.jpeg" alt="Evento 2">
+                <figcaption>Vestido de Noiva</figcaption>
+            </figure>
+            <figure>
+                <img src="fotos/foto6.jpeg" alt="Evento 3" class="large">
+                <figcaption>Espaços Reservados</figcaption>
+            </figure>
+            <figure>
+                <img src="fotos/foto3.jpeg" alt="Evento 4">
+                <figcaption>Varios Tipos de Comidas</figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Formulário de Inscrição</h2>
+        <form action="submit_form.php" method="POST" enctype="multipart/form-data">
+            <label for="company-name">Nome da Empresa:</label>
+            <input type="text" id="company-name" name="company-name" required>
+
+            <label for="event-type">Tipo de Evento:</label>
+            <select id="event-type" name="event-type" required>
+                <option value="casamento">Casamento</option>
+                <option value="formatura">Formatura</option>
+                <option value="aniversario">Aniversário</option>
+                <option value="corporativo">Corporativo</option>
+                <option value="tematica">Festa Temática</option>
+            </select>
+
+            <label for="event-photos">Fotos do Evento:</label>
+            <input type="file" id="event-photos" name="event-photos[]" accept="image/*" multiple required>
+            <small>Selecione uma ou mais fotos do evento (formatos permitidos: JPG, PNG, JPEG).</small>
+
+            <button type="submit">Enviar Inscrição</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Bridal Consulting | Todos os direitos reservados</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.querySelector('header nav').classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
